@@ -1,0 +1,12 @@
+<!--pages/wifi/customView/listView.wxml-->
+<view class='wrapper'>
+  <!--<slot name="before"></slot>-->
+  <block wx:for='{{lists}}' wx:for-index='id' wx:for-item='obj'>
+    <view class='item' bindtap='itemClick' data-ssid='{{obj.ssid}}' data-bssid='{{obj.bssid}}' data-secure='{{obj.secure}}'>
+      <text style='font-size:16px;'>wifi名称：{{obj.ssid}}</text>
+      <text style='font-size:16px;margin-right:30rpx;'>信号强度：{{obj.strength}}</text>
+    </view>
+    <view class='d_line' hidden='{{showLine}}'></view>
+  </block>
+  <!--<slot name="after"></slot>-->
+</view>

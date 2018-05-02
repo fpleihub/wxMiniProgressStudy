@@ -1,0 +1,13 @@
+<!--pages/home/widget/optionView.wxml-->
+<view class='opt-content'>
+  <block wx:for="{{optModels}}" wx:for-index="i" wx:for-item="rawobj">
+    <view class='opt-raw'>
+      <view class='opt-col' wx:for="{{rawobj}}" wx:for-index='j' wx:for-item='colobj'>
+        <view class='opt-col-item' hover-class='hover-opt-col-item' hover-stay-time='300' bindtap='itemClick' data-obj='{{optModels[i][j]}}'>
+          <image src='{{colobj.icon}}' class='_icon' mode='scaleToFill'></image>
+          <text>{{colobj.title}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/web/html.wxml-->
+<view class='web-root'>
+  <web-view class='webview' src="{{web_url}}" bindmessage="loadLinsener">
+  
+  </web-view>
+</view>

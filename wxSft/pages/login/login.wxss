@@ -1,0 +1,85 @@
+/* pages/login/login.wxss */
+/**
+*页面样式
+*/
+page { 
+  display: block; 
+  height: 100%;
+  min-height: 100%; 
+}
+/**
+*根视图样式
+*/
+.root{
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+.vcontent{
+  height: 700rpx;
+  margin-left: 40rpx;
+  margin-right: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p_input{
+  color: #eaeaea;
+}
+.view_item_phone,.view_item_code{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-width: 0px 0px 1rpx 0px;
+  border-style: solid;
+  border-bottom-color: #fff;
+}
+.phone_before_hint{
+  color: #eaeaea;
+  display: flex;
+  flex-direction: row;
+  padding-top: 45rpx;
+}
+
+.btn_code{
+  width: 230rpx;
+  height: 80rpx;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  border-color: #00ACF8;
+  border-radius: 50rpx;
+  padding-top: 15rpx;
+  margin-top: 30rpx;
+}
+.input{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+  color: #fff;
+  padding-left: 10rpx;
+}
+/**
+*margin:上 右 下 左
+*/
+.btn_login{
+  margin: 60rpx 20rpx 20rpx 20rpx;
+  background-color: #00ACF8;
+  border-color: #eaeaea;
+  border-radius: 50rpx;
+  color: #fff;
+}
+.btn_login_hover{
+  background-color: #0291D1;
+  border-radius: 50rpx;
+  
+}
+.hide{
+ display: none;
+}
+.show{
+ display: block;
+}

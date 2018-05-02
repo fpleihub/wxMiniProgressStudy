@@ -1,0 +1,49 @@
+<!--pages/smartcard/smartcard.wxml-->
+<view class='_root'>
+   <view class='view-header'>
+    <button class='btn-addmengjing' bindtap='addmengjing'>添加门禁卡</button>
+    <button class='btn-addgongjiao' bindtap='addgongjiao'>添加公交卡</button>
+  </view>
+  <view class='content'>
+    <block wx:for="{{cards}}">
+      <view class='view-card' bindtap='emvcard' data-cardbean='{{item}}'>
+        <view style='display: flex;flex-direction: row;  justify-content: space-between;padding:10rpx;'>
+          <view wx:if="{{item._type===0}}">类型：门禁卡</view>
+          <view wx:elif="{{item._type===1}}">类型：交通卡</view>
+          <view>名称：{{item.cardName}}</view>
+        </view>
+        <view style='padding:10rpx;'>编号：{{item.cardNo}}</view>
+        <view style='padding:10rpx;'>有效期：{{item.cardExp}}天</view>
+        <view style='padding:10rpx;'>AID：{{item.AID}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+  <!--类似popwindow弹框-->
+<view animation="{{animationData}}" class="dialog buydes-dialog-container" wx:if="{{showModalStatus}}">
+    <view class="buydes-dialog-container-top" bindtap="_close"></view>  
+    <view class="container-column buydes-dialog-container-bottom">  
+      <view class='buydes-dialog-container-bottom-title'>
+        <!--box-shadow: h-shadow v-shadow blur spread color inset;-->
+        <view style='width: 60px;height: 60px;margin-top: -30px;margin-left:10px;'></view>
+        <view style='margin-right:5px;margin-top:5px;color:#cccccc' bindtap='_close'>close</view>
+      </view>
+      <view class='view-card-no'>
+        <view style='width:30%;text-align: center;'>卡名:</view>
+        <input style='width:70%;' placeholder='请输入卡名' bindinput='inputCardInfo' data-inputtype='name'></input>
+      </view>
+       <view style='width:100%;height:1rpx;  background-color: #eaeaea;'></view>
+      <view class='view-card-no'>
+        <view style='width:30%;text-align: center;'>编号:</view>
+        <input style='width:60%;' placeholder='请输入卡编号' value='{{currentSeedId}}'></input>
+        <view style='width:10%;height:80rpx;font-size:30rpx;background-color: #cccccc;border 1rpx solid #eaeaea;border-radius:8rpx;margin-right:12rpx;text-align: center;color:#fff;margin-top:10rpx;' bindtap='genRandomSeed'>随机生成</view>
+      </view>
+      <view style='width:100%;height:1rpx;  background-color: #eaeaea;'></view>
+      <view class='view-card-no'>
+        <view style='width:30%;text-align: center;'>有效期:</view>
+        <input style='width:70%;' placeholder='有效期天数' bindinput='inputCardInfo' type="number" data-inputtype='exdate'></input>
+      </view>
+      <view style='width:100%;height:1rpx;  background-color: #eaeaea;'></view>
+      <button style='width:100%;height:100rpx;' bindtap='addCard'>添加</button>
+    </view>  
+</view>

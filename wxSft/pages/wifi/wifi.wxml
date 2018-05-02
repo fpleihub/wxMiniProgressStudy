@@ -1,0 +1,33 @@
+<!--pages/wifi/wifi.wxml-->
+
+<view class='content'>
+  <view class='view-header'>
+    <button class='search-wifi' loading='{{isSearching}}' bindtap='findWifi'>搜索wifi列表</button>
+    <button class='stop-wifi' bindtap='scannQrCodeWifi'>扫码连接</button>
+    <button class='stop-wifi' bindtap='stopWifi'>停止wifi</button>
+  </view>
+  <scroll-view scroll-y class='scry'>
+    <listView show-line='{{false}}' lists='{{wifiLists}}' bindOnItemClick='onItemClick'>
+      <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+      <view slot="before">listView Header</view>
+      <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+      <view slot="after">listView Footer</view>
+    </listView>
+  </scroll-view>
+  
+</view>
+<view class='view-dialog' animation="{{animationData}}" wx:if="{{showModalStatus}}">
+    <view class="dialog-container-top" bindtap="_close"></view> 
+    <view class='dialog-container'>
+      <view style='width:100%;display: flex;flex-direction: row;justify-content:flex-end;' bindtap='_close'>close</view>
+      <view style='margin-top:40rpx;padding-left:23rpx;'> wifi：{{wifiObject.ssid}}</view>
+      <view style='display: flex;flex-direction: row;margin-top:40rpx;padding-left:20rpx;'>
+        密码：<input class='input-wifi' placeholder='请输入wifi密码' bindinput='wifipwdinput'></input>
+      </view>
+      <view style='width:100%;height:40rpx;'></view>
+      <view>
+        <view class='btn_connect' bindtap='connectwifiClick'>连接</view>
+      </view>
+    </view> 
+    <view class="dialog-container-bottom" bindtap="_close"></view> 
+  </view>

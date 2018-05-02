@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "蓝牙连接",
+  "navigationBarBackgroundColor": "#3F79AC",
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

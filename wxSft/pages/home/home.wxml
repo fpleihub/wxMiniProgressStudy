@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class='_root'>
+  <!--banner-->
+  <swiper class='swiper' autoplay='{{true}}' indicator-dots='{{true}}' interval='3000' indicator-color='#000' indicator-active-color='#fff' bindchange='swiperChange'>
+    <block wx:for="{{banners}}" >
+      <swiper-item>
+        <image src='{{item.imageurl}}' mode='scaleToFill' class='_image' bindtap='bannerClick' data-id='{{item.id}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--功能操作版-->
+  <optionView class='optview' optModels='{{opts}}' bindOnOptItemClick='OnOptItemClick'>
+
+  </optionView>
+</view>

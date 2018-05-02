@@ -1,0 +1,15 @@
+<!--pages/bluetooth/bluetooth.wxml-->
+<view class='_root'>
+  <view class='view-header'>
+    <button class='search-bluetooth' loading='{{isSearching}}' bindtap='searchBlutooth'>搜索蓝牙</button>
+    <button class='stop-search' bindtap='stopSearch'>停止搜索</button>
+  </view>
+  <view class='view-content'>
+    <block wx:for='{{_devices}}' wx:for-index='id' wx:for-item='device'>
+      <view class='view-content-item' bindtap='conntBluetooth' data-device='{{device}}'>
+        <view class='text_name'>{{device.name}}</view>
+        <view class='text_rssi'>信号：{{device.RSSI}}</view>
+      </view>
+    </block>
+  </view>
+</view>

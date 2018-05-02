@@ -1,0 +1,13 @@
+<!--pages/nfc/nfcopt.wxml-->
+<view class='_root'>
+  <view class='view-header'>
+    <button class='search-bluetooth' loading='{{isSearching}}' bindtap='startHCEOpt'>开启HCE</button>
+    <button class='stop-search' bindtap='stopHCEOpt'>停止</button>
+  </view>
+
+  
+
+  <view class='content'>
+    <text class='text-content'>{{content}}</text>
+  </view>
+</view>

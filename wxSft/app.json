@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/bluetooth/bluetooth",
+    "pages/nfc/nfcopt",
+    "pages/smartcard/smartcard",
+    "pages/wifi/wifi",
+    "pages/web/html",
+    "pages/hce/hcecard"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#3F79AC",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "其他",
+        "iconPath": "/images/icons/icon_shoukuan_unselected.png",
+        "selectedIconPath": "/images/icons/icon_shoukuan_selected.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/icons/icon_home_unselected.png",
+        "selectedIconPath": "/images/icons/icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icons/icon_user_unselected.png",
+        "selectedIconPath": "/images/icons/icon_user_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}

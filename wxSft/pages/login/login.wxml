@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<!--<view class='root' style=";background-image: url('http://118.25.45.181:8080/static_images/background_img.png');background-size: cover">
+  <view>sasas</view>
+  
+</view>-->
+<view class='root' style="background-image: url({{'http://118.25.45.181:8080/static_images/background_img.png'}});background-size: cover">
+  <form bindsubmit='bylogin'>
+    <view class='vcontent'>
+      <view class='view_item_phone'>
+        <view class='phone_before_hint'>+86</view>
+        <input class='input phone' name='phone' type='number' placeholder-class='p_input' maxlength='11' adjust-position='{{true}}' placeholder='请输入手机号码'></input>
+      </view>
+      <view class='view_item_code'>
+        <view>
+          <input class='input code' name='code' type='number' placeholder-class='p_input' maxlength='6' adjust-position='{{true}}' placeholder='请输入短信验证码'></input>
+        </view>
+        <view class="btn_code {{is_show?'show':'hide'}}" bindtap='clickVerify'>获取验证码</view>
+        <view class="btn_code {{is_show?'hide':'show'}}">{{last_time}}秒后重新发送</view>
+      </view>
+      
+      <button class='btn_login' hover-class='btn_login_hover' form-type='submit' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">验证并登录</button>
+      <button class='btn_login' hover-class='btn_login_hover' bindtap='gopay'>pay</button>
+    </view>
+  </form>
+</view>

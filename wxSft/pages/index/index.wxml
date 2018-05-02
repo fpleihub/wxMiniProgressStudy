@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!-- 引入图片预加载组件 -->
+<import src="../../utils/imageutils/img-loader.wxml"/>
+
+<view class="_root">
+  <block wx:for="{{lists}}" wx:for-index="index" wx:for-item="obj">
+  <view class="list_item">
+    <view class='fill'></view>
+    <view class='item_view' bindtap='itemClick' data-object='{{obj}}'>
+      <view class='item_view_image'>
+        <image  wx:if="{{ obj.loaded }}" src='{{obj.logo}}' class='icon fade_in' mode='autoFill'></image>
+        <template is="img-loader" data="{{ imgLoadList }}"></template>
+      </view>
+      <view class='item_content_text'>
+          <view>{{obj.department_common_name}}</view>
+          <view>{{obj.industry_text}}</view>
+          <view>{{obj.work_place_text}}</view>
+      </view>
+    </view>
+    <view class='fill'></view>
+  </view>
+  </block>
+</view>
+<!--类似popwindow弹框-->
+<view animation="{{animationData}}" class="dialog buydes-dialog-container" wx:if="{{showModalStatus}}">
+    <view class="buydes-dialog-container-top" bindtap="_close"></view>  
+    <view class="container-column buydes-dialog-container-bottom">  
+      <view class='buydes-dialog-container-bottom-title'>
+        <!--box-shadow: h-shadow v-shadow blur spread color inset;-->
+        <image src='{{selectItemIconUrl}}'  style='width: 60px;height: 60px;margin-top: -30px;margin-left:10px;box-shadow: 5px 5px 3px #888888;'></image>
+        <view style='margin-right:5px;margin-top:5px;color:#cccccc' bindtap='_close'>close</view>
+      </view>
+      <block wx:for="{{['detail-pager','email','call-phone','cancle']}}" wx:for-index="index" wx:key="key" wx:for-item="item">  
+        <view bindtap="_close" class="buydes-dialog-container-bottom-item" data-value='{{item}}'>{{item}}</view>  
+      </block>  
+    </view>  
+</view>

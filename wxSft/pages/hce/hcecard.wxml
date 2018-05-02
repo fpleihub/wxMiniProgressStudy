@@ -1,0 +1,11 @@
+<!--pages/hce/hcecard.wxml-->
+<view class='_root'>
+  请使用NFC读卡器进行读取({{last_time}}s)
+  <view class='viewcarditem'>
+    <view>{{currentCard.cardName}}</view>
+    <view>{{currentCard.cardNo}}</view>
+    <scroll-view scroll-y style='width:100%;height:800rpx;'>
+      <text style='width:100%;height:100%;word-break:break-all;'>{{content}}</text>
+    </scroll-view>
+  </view>
+</view>

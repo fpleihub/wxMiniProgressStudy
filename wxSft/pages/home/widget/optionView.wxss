@@ -1,0 +1,40 @@
+/* pages/home/widget/optionView.wxss */
+.opt-content{
+  width: 100%;
+  background-color: #fff;
+}
+.opt-raw{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+.opt-col{
+  width: 33%;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+}
+.opt-col-item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  border: 0.1px solid #eaeaea;
+}
+.hover-opt-col-item{
+  background-color: #eaeaea;
+  box-shadow:5px 5px 10px #CCC; 
+}
+._icon{
+  width: 80rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,113 @@
+/**index.wxss**/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+._root{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.list_item{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 22px;
+  position: relative;
+  z-index: 0;
+}
+.item_view{
+  width: 90%;
+  height:100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  box-shadow:0 0 9px #CCC; 
+}
+.fill{
+  width: 5%;
+ 
+}
+.item_content{
+  display: flex;
+  flex-direction: row;
+}
+.item_content_text{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rpx;
+}
+.item_view_image{
+   width: 20%;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   align-items: center;
+   padding-left: 5rpx;
+}
+.icon{
+  width: 60px;
+  height: 60px;
+}
+
+.buydes-dialog-container{  
+    width: 100%;  
+    height: 100%;  
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;  
+    z-index: 999;  
+    display: flex;
+    flex-direction: column;
+}
+.buydes-dialog-container-top{
+    flex-grow: 1;  
+    display: flex;
+    flex-direction: row;
+}
+.container-column{
+  width: 100%;
+  display: flex;  
+  flex-direction: column;
+}
+.buydes-dialog-container-bottom{  
+    display: flex;  
+    flex-grow: 0;  
+    background-color: white;
+} 
+.buydes-dialog-container-bottom-title{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.buydes-dialog-container-bottom-item{  
+    padding:24rpx;  
+    display: flex;  
+    color: black;
+    justify-content: center;  
+    border-bottom: 1rpx solid #eeeeee;  
+} 
