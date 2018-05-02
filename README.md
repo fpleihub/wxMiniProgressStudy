@@ -27,3 +27,6 @@ wxSft <br/>
 |--app.js "项目Application" <br/>
 |--app.wxss "页面配置" <br/>
 |--project.config.json "项目配置" <br/>
+
+
+小程序中HCE模拟卡读取配合 android NFC读卡器：https://github.com/lambertlei/android-nfc-reader
